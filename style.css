@@ -1,0 +1,620 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: medium;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: fit-content;
+    background-color: black; /* Reverted back to black */
+    color: white; /* Adjusted text color for contrast */
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Grid Background */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(white 1px, transparent 1px), 
+                      linear-gradient(90deg, white 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.15;
+    z-index: -2;
+}
+
+/* Canvas for Doodles */
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.header {
+    position: absolute;
+    width: 100%;
+    text-decoration: none;
+    padding: 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+}
+.header .logo {
+    color: white;
+    text-decoration: wavy;
+    text-transform: none;
+    font-size: 25px;
+    font-weight: 600;
+
+}
+.header .logo span {
+    color: blue;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.header ul {
+    display: flex;
+}
+
+.header ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+.header ul li a {
+    text-decoration: none;
+    color: white; /* Reverted to white */
+    font-size: 18px;
+    padding-bottom: 30px;
+}
+.header ul li a:hover {
+    color: blue;
+    text-decoration: underline;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.home{
+    
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    min-height: fit-content;
+    text-align: center;
+    padding-left: 50px;
+    padding-bottom: 40px;
+    padding-right: 50px;
+}
+.home h1 {
+    padding-top: 300px;
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: blue; /* Reverted to white */
+    text-align: left;
+}
+
+.home h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: white; /* Reverted to white */
+    text-align: left;
+}
+.home h3 {
+    
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: white; /* Reverted to white */
+    text-align: left;
+}
+.home h3 span {
+    position: relative;
+    display: inline-block;
+    color: transparent;
+    -webkit-text-stroke: .7px blue; 
+    font-size: 24px;
+    animation: display-text 16s linear infinite;
+    animation-delay: calc(-4s * var(--i));
+}
+
+@keyframes display-text {
+    25%,100% {
+        display: none;
+    }
+}
+.home h3 span::before{
+    content: attr(data-text);
+    position: absolute;
+    width: 0;
+    border-right: 2px solid blue; /* Reverted to white */
+    color: blue; 
+    white-space: nowrap;
+    overflow: hidden;
+    animation: fill-text 4s linear infinite;
+}
+@keyframes fill-text {
+    10%,
+    100% {
+        width: 0;
+    }
+    70%,
+    90% {
+        width: 100%;
+    }
+}
+
+.home p {
+    padding-right: 20px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: white; /* Reverted to white */
+    text-align: left;
+    
+}
+.home .btn-sci {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    min-height: fit-content;
+}
+.home .btn-sci .btn{
+    padding: 10px 30px;
+    background: blue; /* Reverted to white */
+    color: black; /* Reverted to white */
+    border: 2px solid blue; /* Reverted to white */
+    border-radius: 40px;
+    box-shadow: 0 0 10px blue;
+    font-size: 18px;
+    align-items: left;
+    justify-content: left;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+.home .btn-sci .btn:hover {
+    background: transparent; /* Reverted to white */
+    color: white; /* Reverted to white */
+    box-shadow: none;
+}
+.home .btn-sci .sci{
+    padding-top: 10px;
+    margin-left: 20px;
+}
+.home .btn-sci .sci i{
+    display: inline-flex;
+    padding: 8px;
+    border: 2px solid blue;
+    border-radius: 50%;
+    font-size: 16px;
+    color: blue;
+    margin: 0 8px;
+    transition: .5s;
+}
+.home .btn-sci .sci i:hover {
+    background: blue;
+    color: white;
+    box-shadow: 0 0 10px blue;
+}
+.home-img .img-box {
+    width: 32vw;
+    height: 32vw;
+    background: transparent;
+    border-radius: 50%;
+    margin-top: 45% ;
+    padding: 5px;
+}
+.home-img .img-box img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 10px blue;
+    border:5px blue;
+}
+.header-skills h1{
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.header-skills {
+    text-align: center;
+    color: white;
+    padding: 1rem;
+}
+.header-skills:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 100px;
+    background: blue;
+    border-radius: 2px;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center
+    text-align: center;
+    grid-gap: 1rem;
+    padding: 1rem 80px;
+    font-size: 1.2rem;
+}
+
+.skill-box{
+    padding: 1rem;
+    color: blue;
+    cursor: pointer;
+}
+.skill-box:hover> .skill-title:after, .skill-box:hover> .skill-title:before{
+    width: 35px;
+    
+}
+.skill-box:hover .img{
+    transform: translateY(-10px);
+}
+.skill-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    margin-bottom: o.5rem;
+    position: relative;
+}
+
+.skill-title:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    background-color: #2ecc71;
+    height: 4px;
+    width: 0;
+    border-radius: 2px 0 0 2px;
+    transition: .5s;
+}
+.skill-title:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    background-color: #2ecc71;
+    height: 4px;
+    width: 0;
+    border-radius: 0 2px 2px 0;
+    transition: .5s;
+}
+.img{
+    width: 90px;
+    height: 90px;
+    position: relative;
+    border-radius: 45px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+.img:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 90px;
+    background: rgb(100, 100, 100, 0.5);
+    border-radius: 45px 0 0 45px;
+}
+.skill-title h2{
+    color: white;
+    margin-top: 0.5rem;
+}
+.skill-icon{
+    width: 50px;
+    z-index: 2;
+}
+
+@media screen and (max-width: 990px) {
+    .container{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2rem 50px;
+    }
+}
+@media screen and (max-width: 650px) {
+    .container{
+        grid-template-columns: 1fr;
+        padding: 2rem 50px;
+    }
+}
+
+
+/* Educational Background Section */
+.education {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 80px 10%;
+}
+
+.education h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+
+.education {
+    padding-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    min-height: fit-content;
+    background-color:transparent;
+}
+
+.education .heading {
+    font-size: 3rem;
+    color: var(--text-color);
+    margin-bottom: 7rem;
+}
+.education .timeline-items {
+    max-width: 75rem;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.education .timeline-items::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: blue;
+    left: calc(50% - 1px);
+}
+.education .timeline-items .timeline-item {
+    margin-bottom: 4rem;
+    width: 100%;
+    position: relative;
+}
+.education .timeline-items .timeline-item:last-child {
+    margin-bottom: 0;
+}
+.education .timeline-items .timeline-item:nth-child(odd) {
+    padding-right: calc(50% + 30px);
+    text-align: right;
+}
+.education .timeline-items .timeline-item:nth-child(even){
+    padding-left: calc(50% + 30px);
+    text-align: left;
+}
+.education .timeline-items .timeline-item .timeline-dot {
+    position: absolute;
+    left: calc(50% - 14px);
+    top: 10px;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: blue;
+
+}
+
+.education .timeline-items .timeline-item .timeline-date {
+    color: var(--text-color);
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+.education .timeline-items .timeline-item .timeline-content {
+    padding: 1rem;
+    width: 100%;
+    border: .1rem solid blue;
+    border-radius: 3rem;
+    transition: .5s ease-in-out;
+    
+}
+.education .timeline-items .timeline-item .timeline-content:hover {
+    cursor: pointer;
+    scale: 1.1;
+    box-shadow: 0 0 25px #05dafb;
+    border: #05dafb;
+
+}
+.education .timeline-items .timeline-item .timeline-content h3 {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+.education .timeline-items .timeline-item .timeline-content p {
+    font-size: 1.1rem;
+    color: white;
+    line-height: 2 ;
+    text-transform: lowercase;
+}
+.services {
+    min-height: fit-content;
+    background-color: var(--bg-color);
+    padding: 5rem 5%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+.services .heading {
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.services .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    justify-content: center;
+    width: 100%;
+}
+.services .box-container .box {
+    background-color: blue;
+    padding: 2rem;
+    width: 35rem;
+    border-radius: 3rem;
+    border: .2rem;
+    transition: .5s ease-in-out;
+}
+.services .box-container .box:hover {
+    background-color: #05dafb;
+    opacity: 0.8;
+    scale: 1.1;
+    box-shadow: .1rem .5rem 1rem #05dafb;
+}
+.services .box-container .box h3 {
+    font-size: 1.7rem;
+    color: white;
+    margin-bottom: 1rem;
+    transform: capitalize;
+}
+.services .box-container .box p {
+    font-size: 1.2rem;
+    color: white;
+    line-height: 2;
+    text-transform: lowercase;
+    margin-bottom: 1rem;	
+}
+.services .box-container .box i {
+    font-size: 4rem;
+    color: white;
+    margin-bottom: 1rem;
+    transform: capitalize;
+}
+.services .box-container .box:hover p,
+.services .box-container .box:hover h3 {
+    color: black;
+}
+.contact {
+    min-height: fit-content;
+    background-color: var(--bg-color);
+    padding: 5rem 5%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+.contact .heading {
+    font-size: 3rem;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.contact .heading span {
+    color: blue;
+}
+.contact .form-container {
+    width: 100%;
+}
+.contact .form-container form {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 20rem;
+    padding: 2rem;
+    width: 100%;
+}  
+.contact .form-container form .inputs,
+.contact .form-container form .text {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    width: 49%;
+}
+.contact .form-container form .inputs input,
+.contact .form-container form .text textarea {
+    width: 500px;
+    height: 45px;
+    padding: 10px;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    border: 1px solid blue;
+    background-color:black;
+    color: white;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+.contact .form-container form .text textarea {
+    height: 15rem;
+    resize: none;
+}
+.contact .form-container form .text .btn {
+    color: white;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    background-color: blue;
+    box-shadow: 0 0 25px blue;
+}
+.contact .form-container form .text .btn:hover {
+    background-color: #399e02;
+    color: black;
+    scale: 1.1;
+    box-shadow: 0 0 25px #83f346;
+}   
+.footer {
+    background-color: black;
+    width: 100%;
+    color: white;
+    padding: 15px 0%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;  
+    transform: ease-out;
+}
+.footer .sci i{
+    align-items: center;
+    font-size: 1rem;
+    opacity: 0.9;
+    text-decoration: none;
+
+    padding: 8px;
+    justify-content: center;
+    color: blue;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+.footer .sci i:hover {
+    color: blueviolet;
+    transition: .5s;
+}
+
