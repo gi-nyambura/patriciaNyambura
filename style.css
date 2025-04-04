@@ -549,8 +549,11 @@ canvas {
 }
 .contact-container {
     gap: 3rem;
+    margin-top: 3rem;
     grid-template-columns: 1fr 1.3fr;
     display: grid;
+    justify-content: center;
+    margin: 10%;
     
 }
 .contact-container .contact-box:first-child {
@@ -563,7 +566,7 @@ canvas {
     font-size: 1rem;
 }
 .contact-box .desc{
-    margin: 1.5rem 0 2.5rem;
+    margin: 1.5rem 0 1.5rem;
 }
 .contact-box .contact-detail {
     display: flex;
