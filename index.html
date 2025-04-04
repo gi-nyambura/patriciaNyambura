@@ -11,10 +11,10 @@
 <body>
     <canvas id="doodleCanvas"></canvas>
 
-    <header class="header">
-        <a href="#" class="logo">Patricia <span>Nyambura</span></a>
+
         
         <nav class="navbar">
+            <a href="#" class="logo">Portfolio</a>
             <ul>
             <li class="active"><a href="#">Home</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -24,7 +24,7 @@
             </ul>
         </nav>
         
-    </header>
+   
 
 
     <section class="home">
@@ -47,6 +47,7 @@
                 </div>
             </div>
         </div>
+
         <div class="home-img">
             <div class="img-box">
                 <div class="img-item">
@@ -203,22 +204,51 @@
                 <h2>App development</h2>
                 <p>Creating cross platform applications for your solutioon</p>
         </div>
-        <section class="contact" id="contact">
-            <h1 class="heading">Contact <span>Me</span></h1>
-            <div class="form-container">
-            <form action="#" method="get">
-                <div class="inputs">
-                    <input type="text" placeholder="full name" class="input">
-                    <input type="email" placeholder="email" class="input">
-                    <input type="number" placeholder="phone number" class="input">
-                    <input type="text" placeholder="subject" class="input">
+        <section class="contact active">
+            <div class="contact-container">
+                <div class="contact-box">
+                    <h1>Let's Work Together</h1>
+                    <p>Have a project in mind? Let's connect and bring your ideas to life. I'm here to help you achieve your goals with innovative solutions.</p>
+                    <div class="contact-detail">
+                        <i class='bx bxs-phone'></i>
+                        <div class="detail">
+                           <p>phone</p>
+                           <p>+254 797 808 210</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class='bx bxs-envelope'></i>
+                        <div class="detail">
+                           <p>Email</p>
+                           <p>nyamburapatricia66@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class='bx bxs-map'></i>
+                        <div class="detail">
+                           <p>Address</p>
+                           <p>Nairobi,Kenya</p>
+                        </div>
+                    </div>
                 </div>
-                 <div class="text">
-                    <textarea placeholder="your Message"></textarea>
-                    <a href="#" class="btn">Send Message</a>
-                 </div>   
-            </form> 
-        </div>
+
+                <div class="contact-box">
+                    <form method="post" action="https://script.google.com/macros/s/AKfycbxsauo1EDR-8H6TGNPn6bGj-vJpQzTUZ6wTN1Ikr2KvWCZH_GsjOOXaIP4PmXOIh-fxgg/exec" class="contact-form">
+                        <h1>Contact Me</h1>
+                        <div class="field-box">
+                            <input type="text" placeholder="Full Name" required>
+                            <input type="email" placeholder="Email" required>
+                            <input type="text" placeholder="Phone Number" required>
+                            <input type="text" placeholder="Subject" required>
+                            <textarea placeholder="Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+
+                    </form>
+                    
+                </div>
+            
+            </div>
         </section>
 
     <footer class="footer">
@@ -234,5 +264,6 @@
         </div>  
     </footer>
     <script src="script.js"></script>
+    <script src="formHandler.js"></script>
 </body>
 </html>
